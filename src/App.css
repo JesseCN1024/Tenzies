@@ -1,38 +1,207 @@
-.App {
-  text-align: center;
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
+body{
+  background-color: #0B2434;
+  font-family: 'Karla', sans-serif;
+}
+.d-none{
+  display: none !important;
+}
+
+.starting__bg{
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+
+}
+.starting{
+  width: 100%;  
+  max-width: 700px;
+  margin: auto;
+  color: white;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: max-content 1fr;
+  grid-template-rows: auto 150px;
+}
+.starting h3{ 
+  font-size: 1.5rem;
+  margin: 1rem 1.5rem 1rem;
+}
+.starting__container{ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.starting__arrow{
+  background-color: transparent;
+  color: white;
+  box-shadow: none;
+  font-size: 1.5rem;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+}
+.starting__arrow:hover{
+  cursor: pointer;
+  opacity: .6;
+}
+.starting__arrow-disabled{
   pointer-events: none;
+  opacity: .5;
+}
+.starting__numberbox{
+  width: 180px;
+  text-align: center;
+  padding: 1rem 4rem;
+  border: 1px solid;
+  border-radius: 4px;
+  margin: 0 1rem;
+  font-size: 2rem;
+  overflow: hidden;
+  /* flex-basis: 200px; */
+}
+.starting__btn{
+  grid-column: 1/-1;
+  justify-self: center;
+  color: white;
+  background-color: #5035FF;
+  border: none;
+  padding: 0.9rem 1rem;
+  border-radius: 4px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.starting__btn:hover{
+  opacity: .6;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.game__bg{
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center ;
+}
+.game{
+  background-color: white;
+  border-radius: 6px;
+  margin: auto;
+  max-width: 800px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.game__header{
+  font-family: 'Karla', sans-serif;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #2B283A;
+}
+.game__decs{
+  text-align: center;
+  color: #4A4E74;
+}
+.game__dice{
+  margin: 30px;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 20px;
+}
+.game__dice-die{
+  border: 1px solid #ccc;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color:#2B283A;
+  font-family: 'Karla', sans-serif;
+  box-shadow: 0px 2px 2px rgba(0,0,0,.15);
+  border-radius: 4px;
+  cursor: pointer;
+}
+.die-disabled{
+  pointer-events: none;
+}
+.game__btn{
+  background-color: #5035FF;
   color: white;
+  border: none;
+  font-weight: 700;
+  padding: 15px 40px;
+  border-radius: 4px;
+  font-family: 'Karla', sans-serif;
+  font-size: 1.3rem;
+  cursor: pointer;
+
+}
+.game__btn:hover{
+  opacity: .8;
+}
+.game__btn:active{
+  box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
 }
 
-.App-link {
-  color: #61dafb;
+.confetti{
+  position: fixed !important;
+  top: 0; 
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.board{
+  background-color: white;
+  border-radius: 4px;
+  padding: 1rem;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 550px;
+  max-width: 100%;
+}
+.board__time, .board__rolls, .board__best{
+  margin: 0 20px;
+}
+.board__time{
+  text-align: center;
+  width: 75px;
+}
+.board__rolls{
+  text-align: center;
+}
+.board__best{
+  font-size: 1.3rem;
+}
+.board__time h1, .board__rolls h1{
+  flex: 0 1 100px;
+
+}
+
+/* In tablet and mobile  */
+@media (max-width: 991px){
+  .starting{
+    grid-template-columns: max-content;
   }
-  to {
-    transform: rotate(360deg);
+  .board__best{
+    font-size: 1rem;
+  }
+  .board__time h1, .board__rolls h1{
+    font-size: 1.3rem;
   }
 }
+
