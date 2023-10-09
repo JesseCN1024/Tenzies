@@ -5,6 +5,10 @@
 **" Rolling and Holding "**
 </center>
 
+
+https://github.com/JesseCN1024/Tenzies/assets/100943944/f149ddc4-35af-485a-a6df-668449757fe6
+
+
 # Overview
 Tenzies is a web-based dice game built with React. The objective is to roll dice until all dice are the same number. Each roll, the user can choose which dice to keep. The game finishes when all dice show the same number.
 
